@@ -1,0 +1,46 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.firstOne, .secondOne, .thirdOne, .fourthOne, .fifthOne {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 2px dotted #ccc; /* Add dotted border */
+    padding-bottom: 20px; /* Add padding to separate text from the border */
+}
+
+
+.img, .img2, .img4, .img5, .explanOne, .explanTwo, .explanThree, .explanFour, .explanFive {
+    flex: 1;                  /* Flex grow to take equal space */
+    padding: 10px;            /* Padding for spacing inside the sections */
+}
+
+.img3 {
+    flex: 1;
+    padding-top: 0;
+    padding-left: 200px;
+}
+
+.fourthOne, .fifthOne {
+    flex-direction: row-reverse; /* Reverses the order for explan and img */
+}
+
+@media (max-width: 700px) {
+    .firstOne, .secondOne, .thirdOne, .fourthOne, .fifthOne {
+        flex-direction: column;  /* Stack vertically on small screens */
+    }
+    .img, .img2, .img3, .img4, .img5, .explanOne, .explanTwo, .explanThree, .explanFour, .explanFive {
+        width: 100%;             /* Take full width */
+    }
+    .thirdOne, .fourthOne, .fifthOne {
+        flex-direction: column-reverse;  /* Image on top, text below for specific sections */
+    }
+}
